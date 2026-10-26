@@ -31,7 +31,7 @@ Where each figure came from:
 - Repair, 10 EUR: About 20 minutes of technician time at 25 EUR/h is about EUR 8.30, plus 1.50 EUR of solder and parts.
 - Replacement, 50 EUR. It is a guess of a mid-range industrial board. 
 - Shipping 20 and support 30: It is a guess of a mid-range industrial board. 
-- Relationship, 100 EUR. I assumed a 5% chance of losing a customer worth 2,000 EUR. Say whether you agree.
+- Relationship, 100 EUR. I assumed a 5% chance of losing a customer worth 2,000 EUR.
 - Automatic fail of a good board, 10 EUR.The board skips the inspector but still goes to a technician who finds nothing, so it costs the same as a repair.
 - Base rate 2%. It is a guess of a mature line with a defect rate of few percent. 
 
