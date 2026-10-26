@@ -78,7 +78,7 @@ Where each figure came from:
 
 **Predict nothing.** Predict nothing never raises a false alarm, but it also detects nothing: it misses all 186 defective test images, so every defective board would ship. At a 2% defect rate it would cost about €4,000 per 1,000 boards, against €501 for my model with human review.
 
-**Verdict.** My fine-tuned model beats both baselines: it flags 175 of 186 defective test images (94%) against 50 (27%) for COCO and 0 for predict nothing, with 3% false alarms against 16%, and its AUROC is 0.965 against 0.502. The gap was [larger than / about what / smaller than] I expected because [your reason].
+**Verdict.** My fine-tuned model beats both baselines: it flags 175 of 186 defective test images (94%) against 50 (27%) for COCO and 0 for predict nothing, with 3% false alarms against 16%, and its AUROC is 0.965 against 0.502. The gap was larger than I expected because COCO’s AUROC of 0.502 shows it has no usable signal for PCB defects and fine-tuning on about 5,800 labelled crops was enough to separate defective from good images almost perfectly. But because COCO was a weak baseline and the test set shares its source boards and style with the training data, I read this as proof that fine-tuning works, not as proof that 0.965 will hold in production.
 
 
 **Training.** Google Colab, Tesla T4 GPU, about 38 minutes. 30 epochs (early stopping did not trigger), batch size 16, image size 640, early-stopping patience 10, seed 0. Ultralytics chose the optimizer automatically (AdamW, learning rate 0.001). The best checkpoint on the validation split is saved as `weights/best.pt`. The test split was not used to train or to choose any threshold.
